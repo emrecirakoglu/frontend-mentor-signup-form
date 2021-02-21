@@ -3,142 +3,215 @@ $Green: hsl(154, 59%, 51%);
 $Blue: hsl(248, 32%, 49%);
 $DarkBlue: hsl(249, 10%, 26%);
 $GrayishBlue: hsl(246, 25%, 77%);
-main {
-    padding: 5rem 18rem;
-    height: 100%;
-    display: flex;
-    overflow: hidden;
-    .description {
-        color: #ffffff;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        .header {
-            font-size: 2.25rem;
-            font-weight: 700;
-            line-height: 2.5rem;
-        }
-        .detail {
-            margin-top: 1rem;
-            padding-right: 1rem;
-            font-weight: 500;
-        }
-    }
-    .sign-form {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-        .info {
-            text-align: center;
-            background-color: $Blue;
-            color: #ffffff;
-            padding: .75rem 3rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            box-shadow: 0px 10px 0px rgba(50, 50, 50, 0.25);
-        }
-        .form {
-            display: flex;
-            flex-direction: column;
-            background-color: #ffffff;
-            padding: 1.75rem;
-            border: 1px transparent;
-            border-radius: 10px;
-            box-shadow: 0px 10px 0px rgba(50, 50, 50, 0.25);
-            .form-input {
-                position: relative;
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                margin: .75rem 0;
-                input {
-                    width: 100%;
-                    padding: 1rem 1.25rem;
-                    border: 1px solid $GrayishBlue;
-                    border-radius: 5px;
-                    color: $DarkBlue;
-                    font-size: 15px;
-                    font-weight: 800;
-                    &:focus {
-                        outline: none;
-                        border: 1px $DarkBlue solid;
-                    }
-                    &:hover:not(.invalid) {
-                        border: 1px rgba(#000, .5) solid;
-                    }
-                }
-                .invalid {
-                    border: 2px $Red solid;
-                    &:focus {
-                        border: 2px $Red solid;
-                    }
-                    &::placeholder {
-                        opacity: 0;
-                    }
-                }
-                .error-msg {
-                    text-align: right;
-                    font-size: .65rem;
-                    font-style: italic;
-                    color: $Red;
-                    font-weight: 500;
-                }
-                .error-sign {
-                    position: absolute;
-                    right: 20px;
-                    transform: translateY(75%);
-                }
-                .email-template {
-                    position: absolute;
-                    left: 20px;
-                    transform: translateY(75%);
-                    color: $Red;
-                    font-weight: 500;
-                    cursor: text; 
-                }
-            }
-            .submit-btn {
-                text-decoration: none;
-                text-transform: uppercase;
-                color: #ffffff;
-                background-color: $Green;
-                text-align: center;
-                padding: 1rem 3rem;
-                border: 1px transparent;
-                border-radius: 5px;
-                font-weight: 600;
-                margin-top: .5rem;
-                box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.5);
-                
-                &:disabled {
-                    background-color: lighten($color: $Green, $amount: 20);
-                }
-                &:hover {
-                    cursor: pointer;
-                }
-                &:focus {
-                    outline: none;
-                }
-            }
-            .terms {
-                text-align: center;
-                font-size: .6rem;
-                padding: .75rem 0;
-                color: $GrayishBlue;
-            }
-        }
-    }
-}
 
 .text-red {
-    color: $Red;
+  color: $Red;
 }
 
 .text-bold {
-    font-weight: 700;
+  font-weight: 700;
+}
+
+main {
+  padding: 5rem 18rem;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  .description {
+    color: #ffffff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    .header {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 2.5rem;
+    }
+    .detail {
+      margin-top: 1rem;
+      padding-right: 1rem;
+      font-weight: 500;
+    }
+  }
+  .sign-form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    .info {
+      text-align: center;
+      background-color: $Blue;
+      color: #ffffff;
+      padding: 0.75rem 3rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0px 10px 0px rgba(50, 50, 50, 0.25);
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 1.75rem;
+      border: 1px transparent;
+      border-radius: 10px;
+      box-shadow: 0px 10px 0px rgba(50, 50, 50, 0.25);
+      .form-input {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0.75rem 0;
+        input {
+          width: 100%;
+          padding: 1rem 1.25rem;
+          border: 1px solid $GrayishBlue;
+          border-radius: 5px;
+          color: $DarkBlue;
+          font-size: 15px;
+          font-weight: 800;
+          &:focus {
+            outline: none;
+            border: 1px $DarkBlue solid;
+          }
+          &:hover:not(.invalid) {
+            border: 1px rgba(#000, 0.5) solid;
+          }
+        }
+        .invalid {
+          border: 2px $Red solid;
+          &:focus {
+            border: 2px $Red solid;
+          }
+          &::placeholder {
+            opacity: 0;
+          }
+        }
+        .error-msg {
+          text-align: right;
+          font-size: 0.65rem;
+          font-style: italic;
+          color: $Red;
+          font-weight: 500;
+        }
+        .error-sign {
+          position: absolute;
+          right: 20px;
+          transform: translateY(75%);
+        }
+        .email-template {
+          position: absolute;
+          left: 20px;
+          transform: translateY(75%);
+          color: $Red;
+          font-weight: 500;
+          cursor: text;
+        }
+      }
+      .submit-btn {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: $Green;
+        text-align: center;
+        padding: 1rem 3rem;
+        border: 1px transparent;
+        border-radius: 5px;
+        font-weight: 600;
+        margin-top: 0.5rem;
+        box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.5);
+
+        &:disabled {
+          background-color: lighten($color: $Green, $amount: 20);
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      .terms {
+        text-align: center;
+        font-size: 0.6rem;
+        padding: 0.75rem 0;
+        color: $GrayishBlue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1560px) {
+    main {
+        padding: 5rem 12rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    main {
+        padding: 5rem 10rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        padding: 4rem 8rem ;
+        flex-direction: column;
+        .description {
+            text-align: center;
+            .header {
+                font-size: 1.25rem;
+                line-height: normal;
+            }
+            .detail {
+                padding: 0;
+                margin-bottom: 1.25rem;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    main {
+        padding: 2em .75rem ;
+        flex-direction: column;
+        overflow: auto;
+
+        .description {
+            text-align: center;
+            .header {
+                font-size: 1.25rem;
+                line-height: normal;
+            }
+            .detail {
+                padding: 0;
+                margin-bottom: 1.25rem;
+
+            }
+        }
+
+
+        .sign-form {
+            padding: .5rem;
+            .form {
+                padding: 1rem;
+
+                .form-input {
+                    margin: .5rem 0;
+                }
+
+                .submit-btn {
+                    padding: 1rem 2rem;
+                }
+
+                .terms {
+                    padding: .5rem;
+                }
+            }
+        }
+    }
 }
